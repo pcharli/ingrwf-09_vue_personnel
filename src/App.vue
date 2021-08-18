@@ -1,10 +1,18 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+  <div id="app" class="content container">
+    <header class="hero is-primary">
+        <div class="hero-body">
+          <h1 class="title">Personnel du Cepegra</h1>
+        </div>
+        <div id="nav">
+          <router-link to="/">Home</router-link> |
+          <router-link to="/contact">Contact</router-link>
+        </div>
+    </header>
     <router-view/>
+    <footer class="footer">
+            <p class="has-text-centered">Cepegra 2021</p>
+    </footer>
   </div>
 </template>
 
@@ -13,7 +21,6 @@
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
 }
 
