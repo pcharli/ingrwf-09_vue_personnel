@@ -2,10 +2,16 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Contact from '../views/Contact.vue'
+import EditPersonne from '../views/EditPersonne.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
+  {
+    path: '/edituser/:id',
+    name: 'EditUser',
+    component: EditPersonne
+  },
   {
     path: '/',
     name: 'Home',

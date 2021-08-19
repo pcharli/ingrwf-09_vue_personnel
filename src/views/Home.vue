@@ -1,6 +1,6 @@
 <template>
   <div class="home section">
-    <Personne @changeStatut="changeStatut(index)" v-for="(personne, index) in personnel" :key="index" :qui="personne"></Personne>
+    <Personne @delPersonne="delPersonne(personne.index, index)" @changeStatut="changeStatut(index)" v-for="(personne, index) in personnel" :key="index" :qui="personne"></Personne>
     <hr>
     <new-personne @addNewPersonne="addPersonne" :index="personnel.length"></new-personne>
   </div>
@@ -36,6 +36,14 @@ export default {
          this.personnel.push(newPersonne) 
          })
        .catch(error => console.log(error))
+   },
+   delPersonne(index, arrayIndex) {
+     service.del(index)
+     .then(response => {
+       console.log(response)
+       this.personnel.splice(arrayIndex,1)
+     })
+     .catch(error => console.log(error))
    }
   },
   created() {

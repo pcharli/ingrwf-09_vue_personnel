@@ -2,6 +2,7 @@
   <div class="new-personne">
     <!-- bulma card -->
     <div class="card section">
+      <h1>Ajouter une personne</h1>
                  <input type="text" class="input" placeholder="url de l'image" v-model="newPersonne.picture">
                         <input class="input" type="text" placeholder="url vignette" v-model="newPersonne.vignette">
                    
@@ -21,7 +22,7 @@
                   </div>
                   <label for="" class="checkbox">
                   <input type="checkbox" v-model="newPersonne.directeur"> Directeur</label>
-                  <button class="button" @click.prevent="addPersonne">Ajouter</button>
+                  <br><button class="button is-primary" @click.prevent="addPersonne">Ajouter</button>
                 </div>
     <!-- end bulma card -->
   </div>

@@ -28,6 +28,7 @@
                   </div>
                   <p class="link" v-if="!qui.directeur"><a href="" @click.prevent.stop="changeStatut">Make directeur</a></p>
                   <p class="link" v-else><a href="" @click.prevent.stop="changeStatut">Delete directeur</a></p>
+                  <p class="link"><a href="" @click.prevent.stop="$emit('delPersonne')"><i class="fas fa-trash"></i></a>&nbsp;<router-link :to="{name:'EditUser', params:{id:qui.index}}">Edit</router-link></p>
                 </div>
               </div>
     <!-- end bulma card -->
